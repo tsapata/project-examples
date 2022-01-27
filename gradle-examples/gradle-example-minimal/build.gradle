@@ -27,6 +27,7 @@ allprojects {
     repositories {
         maven {
             url "http://127.0.0.1:8081/artifactory/libs-release"
+            mavenCentral()
         }
     }
 }
@@ -38,6 +39,8 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 dependencies {
+    implementation(group: 'com.googlecode.libphonenumber', name: 'libphonenumber', version: '8.12.41')
+    
     testImplementation 'junit:junit:4.7'
 }
 
